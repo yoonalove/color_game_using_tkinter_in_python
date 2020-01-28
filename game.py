@@ -14,7 +14,7 @@ timeleft = 30
 # function that will start the game
 def startGame(event):
 
-	if timeleft == 30
+	if timeleft == 30:
 		# start the countdown
 		countdown()
 	# run function to choose the next color
@@ -74,14 +74,14 @@ root.geometry("400x200")
 
 # add an instructions label
 instructions = tkinter.Label(root, text = "Type in the color of " 
-							"the word, not the word text", 
-							font = ('Helvetica', 12))
+                                                "the word, not the word text", 
+                                                font = ('Helvetica', 12))
 
 instructions.pack()
 
 # add a score label
 scoreLabel = tkinter.Label(root, text = "Press enter to start",
-								font = ('Helvetica', 12)
+                                        font = ('Helvetica', 12))
 scoreLabel.pack()
 
 # add a time left label
@@ -90,7 +90,7 @@ timeLabel = tkinter.Label(root, text = "Time left: " + str(timeleft),
 timeLabel.pack()
 
 # add a label for displaying color
-label = tkinter.Label(root, font = ('Helvetica'), 12)
+label = tkinter.Label(root, font = ('Helvetica', 60))
 label.pack()
 
 # add a text entry box for typing in colors
