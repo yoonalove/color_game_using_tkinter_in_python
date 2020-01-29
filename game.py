@@ -19,6 +19,7 @@ def startGame(event):
 		countdown()
 	# run function to choose the next color
 	nextColor()
+	reset()
 
 def nextColor():
 	# use the globally declared score and timeleft
@@ -61,6 +62,18 @@ def countdown():
 		# run the function again after 1 second
 		timeLabel.after(1000, countdown)
 
+# reset game
+def reset():
+	global score
+	global timeleft
+	if timeleft == 0:
+		if e.get().lower() == "restart":
+			score = 0
+			timeleft = 30
+			label.config(text = "")
+	e.delete(0, tkinter.END)
+	timeLabel.config(text = "Time left: " + str(timeleft))
+	scoreLabel.config(text = "Score: " + str(score))
 # Driver code
 
 # create a GUI window
